@@ -2,7 +2,7 @@
   <div class="container">
     <navbar title="设置地图标记点"></navbar>
     <weex-amap class="map" id="map2017" :sdk-key="keys" :zoom="zoom" :center="pos">
-      <weex-amap-marker :position="point.position" :title="point.title" :icon="point.icon" v-for="point in pointArr"  @click="markerClick"></weex-amap-marker>
+      <weex-amap-marker :position="point.position" :title="point.title" :key="point.position" :icon="point.icon" v-for="point in pointArr"  @click="markerClick"></weex-amap-marker>
     </weex-amap>
     <div class="map-control">
       <text class="name">Element: weex-amap-marker </text> 

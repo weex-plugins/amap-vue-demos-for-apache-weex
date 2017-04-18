@@ -2,7 +2,7 @@
   <div class="container">
     <navbar title="地图搜索"></navbar>
     <weex-amap class="map" id="map2017" :search="search" :sdk-key="keys" :zoom=zoom :center="pos">
-      <weex-amap-marker :position="marker.position" :title="marker.title" v-for="marker in markers"></weex-amap-marker>
+      <weex-amap-marker :position="marker.position" :title="marker.title" v-for="marker in markers" :key="marker.position"></weex-amap-marker>
     </weex-amap>
     <div class="map-search">
       <input class="input" @change="change" placeholder="Search Places..."/>

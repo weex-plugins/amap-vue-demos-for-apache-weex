@@ -70,7 +70,7 @@
 </style>
 
 <script>
-  require('../include/navbar.we');
+  require('../include/navbar.vue');
   var Amap = null;
   try {
     Amap = require('@weex-module/amap');

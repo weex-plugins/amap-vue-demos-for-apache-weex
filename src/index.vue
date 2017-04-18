@@ -58,48 +58,56 @@
     data() {
       return {
         root: '初始化',
-        items: [{
-          name: 'pages/init', 
-          title: '初始化地图', 
-          imgsrc: 'http://img1.vued.vanthink.cn/vueda6fc9eae90e26f386d08e7cf8efe90d6.png',
-          keyword: 'Amap',
-          desc: '如何创建一个地图'
-        },
-        {
-          name: 'pages/center', 
-          title: '设置中心', 
-          imgsrc: 'http://img1.vued.vanthink.cn/vueda8593decf0b04433bbafeaa563f13f63.png',
-          keyword: 'Center',
-          desc: '设置或者修改地图的中心'
-        },
-        {
-          name: 'pages/zoom', 
-          title: '设置缩放', 
-          imgsrc: 'http://img1.vued.vanthink.cn/vued620b795c054a92dbe6de5e52705a113b.png',
-          keyword: 'Zoom',
-          desc: '设置地图的缩放级别以及事件回调'
-        },
-        {
-          name: 'pages/marker', 
-          title: '设置标记点', 
-          imgsrc: 'http://img1.vued.vanthink.cn/vued25f8ab41ad07d65b5cb729248a29c057.png',
-          keyword: 'Marker',
-          desc: '给地图添加标记点，提示用户相关地理信息'
-        },
-        {
-          name: 'pages/geolocation', 
-          title: '进行定位', 
-          imgsrc: 'http://img1.vued.vanthink.cn/vued6ce9441a88f274be473e7a0fa2101512.png',
-          keyword: 'Geolocation',
-          desc: '使用地图进行用户的定位'
-        },
-        {
-          name: 'pages/search', 
-          title: '进行搜索', 
-          imgsrc: 'http://img1.vued.vanthink.cn/vued32adfd07696fdc72d8fdecb46f106ba9.png',
-          keyword: 'Search',
-          desc: '使用地图搜索关键城市和服务'
-        }]  
+        items: [
+          {
+            name: 'pages/info-window', 
+            title: '信息窗体', 
+            imgsrc: 'http://img1.vued.vanthink.cn/vuedd739d1f8d17c13e85ebc72a7063f3465.png',
+            keyword: 'InfoWindow',
+            desc: '在地图上显示自定义的信息窗体'
+          },
+          {
+            name: 'pages/circle', 
+            title: '设置圆形', 
+            imgsrc: 'http://img1.vued.vanthink.cn/vued2cd00418adaf48c2f0c678cac4c48d9b.png',
+            keyword: 'Circle',
+            desc: '在地图上显示圆形覆盖物'
+          },
+          {
+            name: 'pages/polyline', 
+            title: '设置折线', 
+            imgsrc: 'http://img1.vued.vanthink.cn/vued759efae4808fd98635461c4a7d6c520c.png',
+            keyword: 'Polyline',
+            desc: '在地图上显示折线'
+          },
+          {
+            name: 'pages/polygon', 
+            title: '设置多边形', 
+            imgsrc: 'http://img1.vued.vanthink.cn/vuededa66db12403e0ccbba4d25865cb8eab.png',
+            keyword: 'Polygon',
+            desc: '在地图上显示多边形'
+          },
+          {
+            name: 'pages/polygon-contains-marker', 
+            title: '多边形判断', 
+            imgsrc: 'http://img1.vued.vanthink.cn/vuede1b5292b15e88ff6cff05c2f89f11956.png',
+            keyword: 'Polygon Contains',
+            desc: '判断多边形是否包含某个点'
+          },
+          {
+            name: 'pages/get-distance', 
+            title: '计算距离', 
+            imgsrc: 'http://img1.vued.vanthink.cn/vuede1b5292b15e88ff6cff05c2f89f11956.png',
+            keyword: 'Distance',
+            desc: '计算两个标记点的距离'
+          },
+          {
+            name: 'pages/pressure-test', 
+            title: '压力测试', 
+            imgsrc: 'http://img1.vued.vanthink.cn/vued76db1e0e8f6ee379797ffd35561aa849.png',
+            keyword: 'test',
+            desc: '使用地图进行用户的定位'
+          }] 
       };
     }
   }  
