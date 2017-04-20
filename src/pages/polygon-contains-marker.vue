@@ -2,20 +2,20 @@
   <div class="container">
     <navbar title="多边形包含判断"></navbar>
     <weex-amap class="map" id="map2017" :sdk-key="keys" :zoom="zoom" :center="pos">
-      <weex-amap-polygon id="polygon-2017" :path="path" fill-color="#2ecc71"></weex-amap-polygon>
+      <weex-amap-polygon ref="polygon-2017" :path="path" fill-color="#2ecc71"></weex-amap-polygon>
       <weex-amap-marker :position="marker.position" :title="marker.title"></weex-amap-marker>
       <weex-amap-marker :position="marker2.position" :title="marker2.title"></weex-amap-marker>
     </weex-amap>
     <div class="map-control">
       <text class="title">Method: polygonContainsMarker</text> 
       <text class="tips">判断多边形是不是包含某个点</text>
-      <div onclick="test" class="btnbox"><text class="btn" >Test Marker1</text></div>
-      <div onclick="test2" class="btnbox"><text class="btn" >Test Marker2</text></div>
+      <div @click="test" class="btnbox"><text class="btn" >Test Marker1</text></div>
+      <div @click="test2" class="btnbox"><text class="btn" >Test Marker2</text></div>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
   .container{
     position: relative;
     flex:1; 
@@ -70,14 +70,14 @@
 </style>
 
 <script>
-  require('../include/navbar.vue');
+  const navbar = require('../include/navbar.vue');
   var Amap = null;
   try {
-    Amap = require('@weex-module/amap');
+    Amap = weex.requireModule('amap');
   } catch(err) {
     console.log(err);
   }
-  var modal = require('@weex-module/modal');
+  var modal = weex.requireModule('modal');
   var path = [
     [116.403322, 39.920255],
     [116.410703, 39.897555],
@@ -85,34 +85,39 @@
     [116.389846, 39.891365]
   ];
   module.exports = {
-    data: {
-      keys: {
-        h5:'f4b99dcd51752142ec0f1bdcb9a8ec02',
-        ios: '',
-        android: 'db6a973159cb0c2639ad02c617a786ae'
-      },
-      pos: [116.397428, 39.90923],
-      path: path,
-      zoom: 13,
-      marker: {
-        position: [116.368904, 39.923423],
-        title: 'a marker'
-      },
-      marker2: {
-        position: [116.403322, 39.897555],
-        title: 'another marker'
-      }
+    components: {
+      navbar,
+    },
+    data() {
+      return {
+        keys: {
+          h5:'f4b99dcd51752142ec0f1bdcb9a8ec02',
+          ios: '',
+          android: 'db6a973159cb0c2639ad02c617a786ae'
+        },
+        pos: [116.397428, 39.90923],
+        path: path,
+        zoom: 13,
+        marker: {
+          position: [116.368904, 39.923423],
+          title: 'a marker'
+        },
+        marker2: {
+          position: [116.403322, 39.897555],
+          title: 'another marker'
+        }
+      };
     },
     
     methods: {
       test() {
-        Amap.polygonContainsMarker(this.marker.position, this.$el('polygon-2017').ref, (res) => {
+        Amap.polygonContainsMarker(this.marker.position, this.$refs['polygon-2017'], (res) => {
           this.handleRes(res);
         });
       },
       
       test2() {
-        Amap.polygonContainsMarker(this.marker2.position, this.$el('polygon-2017').ref, (res) => {
+        Amap.polygonContainsMarker(this.marker2.position, this.$refs['polygon-2017'], (res) => {
           this.handleRes(res);
         });
       },

@@ -8,13 +8,13 @@
     <div class="map-control">
       <text class="title">Methods: getDistanceBetweenMarkers</text> 
       <text class="tips">getDistanceBetweenMarkers，可以获取地图上两个坐标点的巨鹿</text>
-      <div onclick="getDistance" class="btnbox"><text class="btn" >Get Distance</text></div>
+      <div @click="getDistance" class="btnbox"><text class="btn" >Get Distance</text></div>
       <text class="distance" v-if="distance">{{distance}}</text>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped> 
   .container{
     position: relative;
     flex:1; 
@@ -69,8 +69,8 @@
 </style>
 
 <script>
-  const navbar = require('../include/navbar.we');
-  
+  const navbar = require('../include/navbar.vue');
+  const Amap = weex.requireModule('amap');
   module.exports = {
     components: {
       navbar

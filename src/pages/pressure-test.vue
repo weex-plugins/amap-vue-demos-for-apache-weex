@@ -2,7 +2,7 @@
   <div class="container">
     <navbar title="压力测试"></navbar>
     <weex-amap class="map" id="map2017" :sdk-key="keys" :zoom="zoom" :center="pos">
-      <weex-amap-marker :position="point.position" :title="point.title" :icon="point.icon" v-for="point in pointArr"  @click="markerClick"></weex-amap-marker>
+      <weex-amap-marker :position="point.position" :title="point.title" :icon="point.icon" :key="point.title" v-for="point in pointArr"  @click="markerClick"></weex-amap-marker>
     </weex-amap>
     <div class="map-control">
       <text class="title">Marvel vs DC </text> 
@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .container{
     position: relative;
     flex:1;
@@ -101,6 +101,7 @@
     'http://img1.vued.vanthink.cn/vued940e8ab79a5a6f45d29b7ec4cd26ebb4.png',
     'http://img1.vued.vanthink.cn/vued49ae3f1383f76992f42aa2e79d643649.png'
   ];
+  const modal = weex.requireModule('modal');
   module.exports = {
     components: {
       navbar
@@ -151,13 +152,15 @@
         for(let i=0; i<5; i++) {
           const coor = [116.487 + Math.random()*1, 39.7278548 + Math.random()];
           const n = i % 5;
-          const icon = icons2[n]
+          const icon = icons2[n];
+         
           this.pointArr.push({
             position:coor,
             title:'坐标:' + coor.join(','),
             icon:  icon
           });
         }
+        console.log(this.pointArr);
       },
       
       removePoints() {

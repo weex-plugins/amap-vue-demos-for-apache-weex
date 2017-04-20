@@ -1,13 +1,13 @@
 <template>
   <div class="navbar">
-    <div class="btn-back" @click="goHome">
-      <image class="btn-arrow-left" src="http://img1.vued.vanthink.cn/vued9c8e7e738ff94abee23eb69d7f1401e9.png"></image>
-      <text class="btn-text">返回</text>
+    <div class="navbar-btn-back" @click="goHome">
+      <image class="navbar-btn-arrow-left" src="http://img1.vued.vanthink.cn/vued9c8e7e738ff94abee23eb69d7f1401e9.png"></image>
+      <text class="navbar-btn-text">返回</text>
     </div>
-    <text class="title">{{title}}</text>
+    <text class="navbar-title">{{title}}</text>
   </div>
 </template>
-<style>
+<style scoped>
   .navbar{
     position: relative;
     display:flex;
@@ -18,24 +18,24 @@
     border-bottom-width: 2px;
     border-bottom-color: #ddd;
   }
-  .btn-back{
+  .navbar-btn-back{
     z-index:10;
     flex-direction: row;
     align-items: center;
     width: 180px;
   }
-  .btn-arrow-left{
+  .navbar-btn-arrow-left{
     width: 60px;
     height: 60px;
     margin-left: 10px;
   }
-  .btn-text{
+  .navbar-btn-text{
     color: #0f89f5;
   }
-  .title{
+  .navbar-title{
     position: absolute;
-    left:0;
-    right:0;
+    left:180px;
+    right:180px;
     top:0;
     height: 88px;
     line-height: 88px;

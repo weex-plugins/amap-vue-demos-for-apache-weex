@@ -5,13 +5,13 @@
       <weex-amap-circle :center="pos" radius="7000" fill-color="#2ecc71" fill-width="4"></weex-amap-circle>
     </weex-amap>
     <div class="map-control">
-      <text class="title">Componenet: weex-amap-circle</text> 
+      <text class="title">Component: weex-amap-circle</text> 
       <text class="tips">可以在地图上绘制圆形</text>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
   .container{
     position: relative;
     flex:1; 
@@ -49,7 +49,7 @@
 </style>
 
 <script>
-  const navbar = require('../include/navbar.we');
+  const navbar = require('../include/navbar.vue');
   
   module.exports = {
     components: {

@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .container{
     position: relative; 
     flex:1; 

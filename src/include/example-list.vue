@@ -22,10 +22,10 @@
       var host = '';
       var path = '';
       var nativeBase;
-      var isAndroidAssets = bundleUrl.indexOf('your_current_IP') >= 0 || bundleUrl.indexOf('file://assets/')>=0;
+      var isAndroidAssets = bundleUrl.indexOf('file://assets/')>=0;
       var isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexDemo.app') > 0;
       if (isAndroidAssets) {
-        nativeBase = 'file://assets/';
+        nativeBase = 'file://assets/dist/';
       }
       else if (isiOSAssets) {
         // file:///var/mobile/Containers/Bundle/Application/{id}/WeexDemo.app/
@@ -44,7 +44,7 @@
         }
         nativeBase = 'http://' + host + '/';
       }
-      var h5Base = './weex.html?page=';
+      var h5Base = './index.html?page=';
       // in Native
       var base = nativeBase;
       if (typeof navigator!=='undefined'&& (navigator.appCodeName === 'Mozilla' || navigator.product === 'Gecko') ) {
@@ -55,7 +55,7 @@
           base = h5Base;
         }
       } else {
-        base = nativeBase + path + '/';
+        base = nativeBase + path;
       }
       for (var i in this.items) {
         var item = this.items[i];

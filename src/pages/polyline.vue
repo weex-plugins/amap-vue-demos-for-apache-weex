@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .container{
     position: relative;
     flex:1; 
@@ -49,7 +49,7 @@
 </style>
 
 <script>
-  const navbar require('../include/navbar.we');
+  const navbar = require('../include/navbar.vue');
   
   module.exports = {
     components: {
