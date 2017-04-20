@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .info-win{
     width: 500px;
     padding: 5px;
@@ -21,7 +21,7 @@
     height: 180px;
   }
   .desc{
-    font-size: 20;
+    font-size: 20px;
     background-color: #fff;
     padding: 5;
   }

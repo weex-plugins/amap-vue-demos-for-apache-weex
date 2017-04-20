@@ -15,14 +15,14 @@
       <text class="title">Component: weex-amap-info-window</text> 
       <text class="tips">在地图上显示自定义窗体</text> 
       <div class="btn-group">
-        <div onclick="toggleSta" class="btnbox">
-        <text v-if="!southStation.open" class="btn" >打开南站信息</text>
-        <text v-if="!southStation.open" class="btn" >关闭南站信息</text>
-      </div>
-      <div onclick="toggleMus" class="btnbox">
-        <text v-if="!palaceMuseum.open" class="btn" >打开故宫信息</text>
-        <text v-if="palaceMuseum.open" class="btn" >关闭故宫信息</text>
-      </div>
+        <div @click="toggleSta" class="btnbox">
+          <text v-if="!southStation.open" class="btn" >打开南站信息</text>
+          <text v-if="southStation.open" class="btn" >关闭南站信息</text>
+        </div>
+        <div @click="toggleMus" class="btnbox">
+          <text v-if="!palaceMuseum.open" class="btn" >打开故宫信息</text>
+          <text v-if="palaceMuseum.open" class="btn" >关闭故宫信息</text>
+        </div>
       </div>
       
     </div>
