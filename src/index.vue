@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <scroller class="container">
     <div class="bg">
       <image class="map-bg" src="http://img1.vued.vanthink.cn/vued606f6ce9ac598cf0c23e0653f4cd7d54.png" ></image>
     </div>
@@ -8,10 +8,10 @@
       <text class="title">WEEX-AMAP DEMOS</text>
     </div>
     <example-list :items="items"></example-list>
-  </div>
+  </scroller>
 </template>
 
-<style>
+<style scoped>
   .container{
     position: relative;
     flex:1;

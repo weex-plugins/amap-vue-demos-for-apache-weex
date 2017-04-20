@@ -12,7 +12,7 @@
         <div @click="addDC" class="btnbox"><text class="btn btn-dc" > Add DC Hero</text></div>
       </div>
       <div class="btn-group">
-        <div @click="removePoints" class="btnbox"><text class="btn btn-reverse" >Clear HeroS</text></div>
+        <div @click="removePoints" class="btnbox"><text class="btn btn-reverse" >Clear Heros</text></div>
       </div>
     </div>
   </div>
@@ -160,7 +160,6 @@
             icon:  icon
           });
         }
-        console.log(this.pointArr);
       },
       
       removePoints() {

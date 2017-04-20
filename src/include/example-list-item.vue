@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .item{
     height: 460px;
     margin: 40px;
