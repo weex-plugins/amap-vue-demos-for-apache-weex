@@ -18,7 +18,7 @@ Add weex-amap plugin
 weex plugin add weex-amap
 ```
 
-Finally just run android or iOs.
+Finally just run android or ios.
 
 ```
 weex run android
